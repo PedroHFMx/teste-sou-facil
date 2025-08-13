@@ -52,6 +52,21 @@ export function TitleText2({ children, className }: CustomTextProps) {
   );
 }
 
+export function TitleText3({ children, className }: CustomTextProps) {
+  return (
+    <Text
+      style={{
+        fontFamily: 'Poppins-Bold',
+        fontSize: 20,
+        includeFontPadding: false,
+      }}
+      className={`${className}`}
+    >
+      {children}
+    </Text>
+  );
+}
+
 export function ButtonText({ children, className }: CustomTextProps) {
   return (
     <Text

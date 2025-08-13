@@ -23,7 +23,7 @@ export default function CustomTextInput({
   ...rest
 }: CustomTextInputType) {
   return (
-    <View className={`flex flex-row ${className}`} style={styles.container}>
+    <View style={styles.container}>
       <TextInput
         cursorColor={'black'}
         style={styles.input}
@@ -51,6 +51,9 @@ const styles = StyleSheet.create({
     height: 50,
     elevation: 3,
     backgroundColor: 'white',
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
   },
   touchableOpacity: {
     height: '100%',

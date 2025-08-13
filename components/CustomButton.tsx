@@ -2,12 +2,13 @@ import {
   GestureResponderEvent,
   StyleProp,
   TouchableOpacity,
+  TouchableOpacityProps,
   View,
   ViewStyle,
 } from 'react-native';
 import { ReactNode } from 'react';
 
-type CustomButtonType = {
+type CustomButtonType = TouchableOpacityProps & {
   children: ReactNode;
   className?: string;
   onPress: ((event: GestureResponderEvent) => void) | undefined;
@@ -15,27 +16,33 @@ type CustomButtonType = {
   height?: number;
 };
 
-export default function CustomButton(props: CustomButtonType) {
+export default function CustomButton({
+  children,
+  className,
+  onPress,
+  bgColor,
+  height,
+  ...rest
+}: CustomButtonType) {
   return (
-    <TouchableOpacity onPress={props.onPress}>
+    <TouchableOpacity {...rest} onPress={onPress}>
       <View
         style={[
           buttonStyle,
           {
-            backgroundColor: props.bgColor ?? '#1e3a8a',
-            height: props.height ?? 60,
+            backgroundColor: rest.disabled ? '#a1a1aa' : bgColor ?? '#1e3a8a',
+            height: height ?? 60,
           },
         ]}
-        className={`${props.className}`}
+        className={`${className}`}
       >
-        {props.children}
+        {children}
       </View>
     </TouchableOpacity>
   );
 }
 
 const buttonStyle: StyleProp<ViewStyle> = {
-  minWidth: '100%',
   borderRadius: 99999,
   alignItems: 'center',
   justifyContent: 'center',
