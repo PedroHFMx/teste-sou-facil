@@ -1,5 +1,5 @@
 {
-  "name": "TesteSouFacil",
+  "name": "teste-sou-facil",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,9 +10,23 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native/new-app-screen": "0.80.2",
+    "@react-navigation/bottom-tabs": "^7.4.6",
+    "@react-navigation/elements": "^2.6.3",
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/native-stack": "^7.3.25",
+    "nativewind": "^4.1.23",
     "react": "19.1.0",
     "react-native": "0.80.2",
-    "@react-native/new-app-screen": "0.80.2"
+    "react-native-feather": "^1.1.2",
+    "react-native-gesture-handler": "^2.28.0",
+    "react-native-get-random-values": "^1.11.0",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-reanimated": "^4.0.2",
+    "react-native-safe-area-context": "^5.6.0",
+    "react-native-screens": "^4.13.1",
+    "react-native-vector-icons": "^10.3.0",
+    "react-native-worklets": "^0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -27,7 +41,9 @@
     "@react-native/typescript-config": "0.80.2",
     "@types/jest": "^29.5.13",
     "@types/react": "^19.1.0",
+    "@types/react-native-vector-icons": "^6.4.18",
     "@types/react-test-renderer": "^19.1.0",
+    "babel-preset-expo": "^13.2.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",

@@ -1,4 +1,9 @@
 {
   "name": "TesteSouFacil",
-  "displayName": "TesteSouFacil"
+  "displayName": "TesteSouFacil",
+  "expo": {
+    "web": {
+      "bundler": "metro"
+    }
+  }
 }
